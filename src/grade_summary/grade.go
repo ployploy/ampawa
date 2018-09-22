@@ -1,5 +1,12 @@
 package grade_summary
 
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
 type Grade struct {
 	APlus int
 	A     int
@@ -10,6 +17,24 @@ type Grade struct {
 	DPlus int
 	D     int
 	F     int
+}
+
+func Readfile(path string) []int {
+	var inputs []int
+	file, err := os.Open(path)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		number, _ := strconv.Atoi(scanner.Text())
+		inputs = append(inputs, number)
+	}
+
+	return inputs
+
 }
 
 func GradeSummary(inputPoint []int) Grade {

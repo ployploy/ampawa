@@ -48,23 +48,17 @@ func Test_GradeSummary_Input_25_4_57_73_1_Should_Be_B_1_DPlus_1_F_3(t *testing.T
 
 func Test_GradeSummary_Input_sum_Should_Be_B_1_DPlus_1_F_3(t *testing.T) {
 	expected := Grade{
-		APlus: 1,
-		A:     0,
-		BPlus: 0,
-		B:     1,
-		CPlus: 0,
-		C:     1,
-		DPlus: 1,
-		D:     0,
-		F:     1,
+		APlus: 89,
+		A:     21,
+		BPlus: 29,
+		B:     17,
+		CPlus: 33,
+		C:     24,
+		DPlus: 31,
+		D:     28,
+		F:     228,
 	}
-	inputPoint := []int{
-		30,
-		56,
-		72,
-		89,
-		60,
-	}
+	inputPoint := Readfile("inputdata.txt")
 
 	actualResult := GradeSummary(inputPoint)
 
