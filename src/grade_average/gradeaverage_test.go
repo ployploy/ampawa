@@ -13,7 +13,7 @@ func Test_GradeAverage_InputInput_25_4_Should_Be_0(t *testing.T) {
 	}
 }
 
-func Test_GradeAverage_InputInput_ListPoints_Should_Be_0_Dot_7(t *testing.T) {
+func Test_GradeAverage_InputInput_ListPoints_Should_Be_1_Dot_375(t *testing.T) {
 	expected := 1.375000
 	inputPoint := Readfile("inputdata.txt")
 
