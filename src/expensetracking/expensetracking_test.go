@@ -16,7 +16,7 @@ func Test_ExpenseAVGpreDay_Input_7_Days_Should_Be_Total_Price_185dot71(t *testin
 	}
 }
 
-func Test_ExpenseAVGpreDay_Input_31_Days_Should_Be_Total_Price_185dot71(t *testing.T) {
+func Test_ExpenseAVGpreDay_Input_31_Days_Should_Be_Total_Price_211dot87(t *testing.T) {
 	expected := 211.87
 	file, _ := ioutil.ReadFile("data.txt")
 	inputString := string(file)
